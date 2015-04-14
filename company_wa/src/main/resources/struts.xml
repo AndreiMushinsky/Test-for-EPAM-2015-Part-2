@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<package name="company" namespace="/company" extends="struts-default">
+	
+		<action name="start" class="by.amushinsky.action.BasicAction">
+			<result>/WEB-INF/company/list.jsp</result>
+		</action>
+		
+		<action name="departmentChoosen" class="by.amushinsky.action.BasicAction">
+			<result>/WEB-INF/company/list.jsp</result>
+			<result name="input">/WEB-INF/company/list.jsp</result>
+		</action>
+		
+		<action name="showAddForm" class="by.amushinsky.action.AddFormAction">
+			<result>/WEB-INF/company/add.jsp</result>
+		</action>
+		
+		<action name="showDelForm" class="by.amushinsky.action.DelFormAction">
+			<result>/WEB-INF/company/del.jsp</result>
+		</action>
+		
+		<action name="showEditForm" class="by.amushinsky.action.EditFormAction">
+			<result>/WEB-INF/company/edit.jsp</result>
+		</action>
+		
+		<action name="deleteEmployee" class="by.amushinsky.action.DeleteAction">
+			<result>/WEB-INF/company/deleteSuccess.jsp</result>
+		</action>
+		
+		<action name="addEmployee" class="by.amushinsky.action.AddAction">
+			<result name="input">/WEB-INF/company/add.jsp</result>
+			<result name="success">/WEB-INF/company/addSuccess.jsp</result>
+		</action>
+		
+		<action name="editEmployee" class="by.amushinsky.action.EditAction">
+			<result name="input">/WEB-INF/company/edit.jsp</result>
+			<result name="success">/WEB-INF/company/editSuccess.jsp</result>
+		</action>
+		
+	</package>
+
+</struts>
